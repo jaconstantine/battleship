@@ -8,7 +8,7 @@ import static com.foobar.Ship.allSunk;
 import static com.foobar.Ship.hitShips;
 
 /**
- * Created by jconstan on 3/21/16.
+ * Created by jconstan on 3/23/16.
  */
 public class Board {
     // this class represents one board in the game of battleship
@@ -19,6 +19,7 @@ public class Board {
     private Set<Coordinate> history = new HashSet<Coordinate>(bsize * (bsize/2));
     private Ship[] ships = new Ship[nships];
 
+    // initialize a board
     public void init(Integer[] in) throws boardException {
         Integer shipIndex = 0;
         // initialize the board
@@ -32,6 +33,7 @@ public class Board {
         if (shipIndex != nships) throw new boardException("wrong number of ships. Got: " + shipIndex + ", should be " + nships);
     }
 
+    // the things that can happen when we initiate a move
     public enum moveResult {
         HIT,
         MISS,
@@ -40,6 +42,7 @@ public class Board {
         ALL_SUNK
     }
 
+    // process a move, and return enum based on what we find
     public moveResult doMove(Coordinate m) {
         // have we played this move already>
         if (history.contains(m) == true) return moveResult.ALREADY_PLAYED;
@@ -63,7 +66,6 @@ public class Board {
     }
 
     public Integer getBsize() { return bsize; }
-
 
     // todo: add damage to output
     public String toString() {
