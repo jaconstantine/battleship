@@ -4,7 +4,7 @@ Here are the classes that model the game of battleship.
 
 #### Coordinate
 
-A class to hold x,y values.  Implements hashCode() and overrides equals() so that hashSet can check for equivalence.
+A class to hold x,y values.  Overrides both hashCode() and equals() so that hashSet can check for equivalence.
   
 #### Ship
 
