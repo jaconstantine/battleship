@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // create a board for each player
         Board player1 = new Board();
         Board player2 = new Board();
 
@@ -60,7 +61,7 @@ public class Main {
         System.out.println("Thanks!\n");
 
         // ToDo: handle errors better
-        // ok we have two boards. now we are ready to play
+        // Now we are ready to play
         // now ping pong back and forth until we get an ALL_SUNK
         Integer player = 0;
         while(true) {
