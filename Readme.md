@@ -20,7 +20,7 @@ Methods
     
 #### Board
 
-Class that represents a game board and the interactions with it. This class controls the board size, the number of ships per board, and ths size of the ships.
+Class that represents a game board and the interactions with it. This class controls the board size, the number of ships per board, and ths size of the ships. A board maintains a set of moves that have been played against it in order to detect that a move has already been played.
 
 Methods
 
