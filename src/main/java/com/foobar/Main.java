@@ -60,11 +60,21 @@ public class Main {
         }
         System.out.println("Thanks!\n");
 
+		Board currboard;
+        
         // ToDo: handle errors better
         // Now we are ready to play
         // now ping pong back and forth until we get an ALL_SUNK
         Integer player = 0;
         while(true) {
+			if (player == 0) {
+				currboard = player2;
+			}
+			else {
+				currboard = player1;
+			}
+			System.out.println("Your moves so far:\n" + currboard.showHistory());
+			
             System.out.println("Player " + (player + 1) + ", please enter a move as: x y");
             Integer x = scanner.nextInt();
             Integer y = scanner.nextInt();

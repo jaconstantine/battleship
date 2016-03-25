@@ -83,4 +83,25 @@ public class Board {
         }
         return(sb.toString());
     }
+	
+	public String showHistory() {
+		StringBuilder sb = new StringBuilder();
+        for(Integer y = 0; y < bsize; y++) {
+            for (Integer x = 0; x < bsize; x++) {
+                if (history.contains(new Coordinate(x,y)) == true) {
+                    if (Ship.isHit(ships, new Coordinate(x,y))) {
+						sb.append( "| H ");
+					}
+					else {
+						sb.append( "| x ");
+					}
+                }
+                else {
+                    sb.append( "|   ");
+                }
+            }
+            sb.append("|\n");
+        }
+        return(sb.toString());		
+	}
 }
