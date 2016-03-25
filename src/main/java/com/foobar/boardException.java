@@ -1,4 +1,4 @@
-package com.company;
+package com.foobar;
 
 /**
  * Created by jconstan on 3/21/16.

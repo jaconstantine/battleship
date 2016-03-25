@@ -1,9 +1,9 @@
-package com.company;
+package com.foobar;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.company.Ship.hitShips;
+import static com.foobar.Ship.hitShips;
 import static org.junit.Assert.*;
 
 

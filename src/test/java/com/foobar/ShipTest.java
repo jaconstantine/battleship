@@ -1,4 +1,4 @@
-package com.company;
+package com.foobar;
 
 import org.junit.Test;
 

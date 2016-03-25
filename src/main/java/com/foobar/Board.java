@@ -1,11 +1,11 @@
-package com.company;
+package com.foobar;
 
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
-import static com.company.Ship.allSunk;
-import static com.company.Ship.hitShips;
+import static com.foobar.Ship.allSunk;
+import static com.foobar.Ship.hitShips;
 
 /**
  * Created by jconstan on 3/21/16.
