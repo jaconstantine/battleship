@@ -15,7 +15,7 @@ Methods
 * Integer countDamage() - measures how many elements of a ship are damaged
 * Boolean isHit(Coordinate c) - true if this coordinate would result in a hit on this ship
 * Boolean isSunk() - returns true if this ship has been sunk
-* static Boolean allSunk(Ship[] ship) - returns true if all ships have been sunk
+* static Boolean allSunk(Ship[] ships) - returns true if all ships have been sunk
 * static Optional<Integer> hitShips(Ship[] ships, Coordinate c) - process a move and returns an index into the array of ships if a ship is hit.  Registers the damage done by the move.
     
 #### Board
