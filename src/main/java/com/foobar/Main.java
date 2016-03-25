@@ -60,6 +60,6 @@ public class Main {
 
         // ok we have two boards. now we are ready to play
         // now ping pong back and forth until we get an ALL_SUNK
-
+        System.out.println("player 1\n" + player1.toString());
     }
 }

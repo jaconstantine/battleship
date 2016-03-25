@@ -63,4 +63,22 @@ public class Board {
     }
 
     public Integer getBsize() { return bsize; }
+
+
+    // todo: add damage to output
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for(Integer y = 0; y < bsize; y++) {
+            for (Integer x = 0; x < bsize; x++) {
+                if (Ship.isHit(ships, new Coordinate(x, y)) == true) {
+                    sb.append( "| S ");
+                }
+                else {
+                    sb.append( "|   ");
+                }
+            }
+            sb.append("|\n");
+        }
+        return(sb.toString());
+    }
 }

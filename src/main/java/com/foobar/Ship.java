@@ -44,6 +44,14 @@ public class Ship {
         return Optional.empty();
     }
 
+    public static Boolean isHit(Ship[] ships, Coordinate c) {
+        for(int i = 0; i < ships.length; i++) {
+            if (c.x != ships[i].loc.x) continue;
+            if (c.y >= ships[i].loc.y && c.y <= (ships[i].loc.y + ships[i].size - 1)) return true;
+        }
+        return false;
+    }
+
     public void recordDamage(Integer i) {
         if (i < size) {
             damage[i] = true;
