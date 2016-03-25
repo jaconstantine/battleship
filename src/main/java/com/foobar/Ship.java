@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Optional;
 
 /**
- * Created by jconstan on 3/21/16.
+ * Created by jconstan on 3/2/16.
  */
 public class Ship {
     Coordinate loc;
