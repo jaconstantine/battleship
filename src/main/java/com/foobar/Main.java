@@ -9,6 +9,7 @@ public class Main {
         Board player1 = new Board();
         Board player2 = new Board();
 
+        // ToDo: DRY (don't repeat yourself cleanup
         // ask player 1 to initialize their board
         Scanner scanner = new Scanner(System.in);
         System.out.println("Player 1, please initialize your board.");
@@ -58,8 +59,28 @@ public class Main {
         }
         System.out.println("Thanks!\n");
 
+        // ToDo: handle errors better
         // ok we have two boards. now we are ready to play
         // now ping pong back and forth until we get an ALL_SUNK
-        System.out.println("player 1\n" + player1.toString());
+        Integer player = 0;
+        while(true) {
+            System.out.println("Player " + (player + 1) + ", please enter a move as: x y");
+            Integer x = scanner.nextInt();
+            Integer y = scanner.nextInt();
+            scanner.nextLine();
+
+            Coordinate c = new Coordinate(x, y);
+            Board.moveResult m;
+            if (player == 0) {
+                m = player2.doMove(c);
+            }
+            else {
+                m = player1.doMove(c);
+            }
+            System.out.println("Result: " + m.toString() + "\n");
+            if (m == Board.moveResult.ALL_SUNK) break;
+            else player = (player + 1) % 2;
+        }
+        System.out.println("Congratulations player " + (player + 1) + ". You've won.");
     }
 }

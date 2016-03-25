@@ -36,7 +36,7 @@ public class Ship {
             if (c.x != ships[i].loc.x) continue;
             if (c.y >= ships[i].loc.y && c.y <= (ships[i].loc.y + ships[i].size - 1)) {
                 // record the damage
-                System.err.println("damage to ship " + i + " offset " + (c.y - ships[i].loc.y));
+                // System.err.println("damage to ship " + i + " offset " + (c.y - ships[i].loc.y));
                 ships[i].recordDamage(c.y - ships[i].loc.y);
                 return Optional.of(i);
             }
