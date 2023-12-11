@@ -8,7 +8,7 @@ A class to hold x,y values.  Overrides both hashCode() and equals() so that hash
   
 #### Ship
 
-A class that represents a ship.  Constructor takes a Coordinate and an Integer size.  All ship are vertically oriented.  A ship maintains state of damage done to it.  
+A class that represents a ship.  Constructor takes a Coordinate and an Integer size.  All ships are vertically oriented.  A ship maintains state of damage done to it.  
   
 Methods
 
